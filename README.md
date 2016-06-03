@@ -16,9 +16,9 @@ For a given k, the resulting net is composed of a single Block_0 and repeated (k
 
 Block_i includes subnets INC_{i+1}, TST-y_i, TST-x_i, DEC_i and variables (places) x_i, x'_i, y_i, y'_i, s_i, s'_i.
 
-Connections of neighboring blocks reflect initialization of the next variables x_{i+1}, y_{i+1}, s'_{i+1} and recursive calls of the previous block's TST-y_{i-1}, TST-x_{i-1}:
+Connections of neighboring blocks reflect initialization of the next variables ```x_{i+1}```, ```y_{i+1}```, ```s'_{i+1}``` and recursive calls of the previous block's ```TST-y_{i-1}```, ```TST-x_{i-1}```:
 
-
+```
                                                  x_{i+1}
                                        +----->   y_{i+1}
                                        |        s'_{i+1} 
@@ -40,7 +40,7 @@ Connections of neighboring blocks reflect initialization of the next variables x
 |   +-------------+       |     +-------------+   |
 +-->| TST-x_{i-1} |<------+     | TST-x_i     |<--+
     +-------------+             +-------------+
-
+```
 
 Peculiarities of generating Petri nets in logical (.net) and graphical (.ndr) formats of system Tina are described in [3].
 
