@@ -101,13 +101,9 @@ B. Command line tools
 
 - Generate Petri net to count 2^2^3=256
 
->sift -R pn_de_3.ndr pn_de_3.ktz
+>sift pn_de_3.ndr -f "-p125"
 
-- Build the marking graph in .ktz format
-
->muse pn_de_3.ktz -s -f "p125"
-
-- Find markings which contain a token in p125 (fin-INC_3).
+- Build the marking graph and search on-fly for markings which contain a token in p125 (fin-INC_3).
 
 
 References:
