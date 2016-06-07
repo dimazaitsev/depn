@@ -30,13 +30,13 @@ Connections of neighboring blocks reflect initialization of the next variables `
 |   +-------------+             +-------------+   |
 +-->| TST-y_{i-1} |<------+     | TST-y_i     |<--+
 |   +-------------+       |     +-------------+   |
-|          |              |                       |
-|          v              |                       |
+|          |              |            |          |
+|          v              |            V          |
 |   +-------------+       |     +-------------+   |
-|   | DEC_{i-1}   |       +-----| DEC_i       |<--+
+|   | DEC_{i-1}   |       +-----| DEC_i       |   |
 |   +-------------+       |     +-------------+   |
-|          ^              |                       |
-|          |              |                       |
+|          ^              |            ^          |
+|          |              |            |          |
 |   +-------------+       |     +-------------+   |
 +-->| TST-x_{i-1} |<------+     | TST-x_i     |<--+
     +-------------+             +-------------+
@@ -92,7 +92,7 @@ Menue: "Tools - reachability analysis - verbose - OK"
 
 - Save marking graph into file pn_de_2-tina-R.txt
 
-- Find the only marking having a token in place fin-INC_2 (p72): p10*2 p108*16 p109*16 p110*16 p13*2 p55*4 p56*4 p57*4 p72 p8*2
+- Find the only marking having a token in place ```fin-INC_2 (p72)```: ```p8*2 p10*2 p13*2 p55*4 p56*4 p57*4 p108*16 p109*16 p110*16 p72```
 
 
 B. Command line tools
@@ -105,6 +105,7 @@ B. Command line tools
 
 - Build the marking graph and search on-fly for markings which contain a token in p125 (fin-INC_3).
 
+To start a search in a marking graph, we can determine the place number n (for the label ```fin-INC_k```) either from graphical representation of the net in nd or via textual search on .ndr file for a given label or using the following expression based on the number of places in ```Block_0``` and ```Block_i``` and offsets of the place in question within blocks: if k=1 then n=25 else n=54+(k-2)*53+18=53k-34. Note that marking graphs are rather big to tackle with them for k>4.
 
 References:
 -----------
