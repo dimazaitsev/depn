@@ -107,6 +107,18 @@ B. Command line tools
 
 To start a search in a marking graph, we can determine the place number n (for the label ```fin-INC_k```) either from graphical representation of the net in nd or via textual search on .ndr file for a given label or using the following expression based on the number of places in ```Block_0``` and ```Block_i``` and offsets of the place in question within blocks: if k=1 then n=25 else n=54+(k-2)*53+18=53k-34. Note that marking graphs are rather big to tackle with them for k>4.
 
+Advances with exact computers
+-----------------------------
+
+`depnz.c` - a bit reduced block with additional key -p that produces an exact computer adding 4 priority arcs; described in [4].
+
+Example net: `z5p.ndr` and `z3p.pdf`
+
+`depnzi.c` - key -p produces an exact computer where the prority arcs are replaced by inhibitor arcs following [5]. 
+
+Example net: `depnzi3.ndr` and `depnzi3.pdf`
+
+
 References:
 -----------
 
@@ -115,6 +127,10 @@ References:
 2. Javier Esparza, Decidability and Complexity of Petri Net Problems - An Introduction. LNCS 1491, 1996, 374-428. http://www7.in.tum.de/um/bibdb/esparza/course.pdf  
 
 3. Dmitry A. Zaitsev, Generators of Petri Net Models. Computer Communication & Collaboration, Vol. 2, Issue 2, 2014, 12-25. http://www.bapress.ca/ccc/ccc2014_2/2_14011024.pdf
+
+4. Dmitry A. Zaitsev & MengChu Zhou, From strong to exact Petri net computers, International Journal of Parallel, Emergent and Distributed Systems, 37(2), 2022, 167-186. https://doi.org/10.1080/17445760.2021.1991340
+
+5. M. Hack, Petri Net Languages, Comput. Struct. Group, Massachusetts Inst. Technol., Cambridge, MA, USA, Tech. Rep. 159, June. 1976. https://dspace.mit.edu/handle/1721.1/149453 
 
 
 ---------------------------
